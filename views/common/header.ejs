@@ -1,0 +1,50 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <div class="navbar">
+      <div class="navbar-nav">
+        <a class="navbar-brand" href="/"> Guitar Songs </a>
+        <a class="nav-link active" href="/">
+          Home <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-link" href="songs"> Songs</a>
+
+        <% if(user) { %>
+        <a class="nav-link" href="logout"> <%= user.email %> (Logout) </a> <%
+        }%> <% if(!user) { %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Join
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="login">Login</a>
+            <a class="dropdown-item" href="join">Register</a>
+          </div>
+        </li>
+
+        
+        <% } %>
+
+        <div class="container">
+          <form>
+          <div class="input-group mb-3">
+                  <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search for a song"
+                  id="searchInput"
+                  />
+                  <div class="input-group-append">
+                      <button onclick="handleSubmit()" class="btn btn-outline-secondary" type="button">
+                           Search Songs 
+                      </button>
+                  </div>
+              </form>
+              <div id="songItems"></div>
+           </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<script src="scripts/search-song.js"></script>
+
