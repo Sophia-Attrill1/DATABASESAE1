@@ -37,11 +37,14 @@
 
 <% } %>
 
+<% if(user) { %>
 <h1 class="text-justify"> Songs  </h1>
 <div class="col-md-12 col-md-offset-2  justify-content-center">
   <a role="button" class="btn btn-outline-success" href="/create-song">Create a new song</a>
 
 </div>
+
+<%}%>
   
   <div class="col-md-12 col-md-offset-2">
   
@@ -71,9 +74,11 @@
                 <td><%=  song.difficulty  %></td>
                 <td><%=  song.completion  %></td>
                 
+                <% if(user) { %>
                 <td class="text-center"><a class='btn btn-outline-primary' href="/songs/update/<%= song.id %>" ><span class="glyphicon glyphicon-edit"></span> Edit</a> 
                   <a  href="/songs/delete/<%= song.id %>" class="btn btn-outline-danger"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
                  
+                 <%}%>
             </tr>
             
          <%  
