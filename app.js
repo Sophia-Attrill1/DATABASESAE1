@@ -112,11 +112,12 @@ app.get("/api/search-songs", songApiController.list);
 
 
 
-app.get("/join", (req, res) => {
-  res.render('create-user', { errors: {} })
-});
+// app.get("/join", (req, res) => {
+//   res.render('create-user', { errors: {} })
+// });
 
-app.post("/join", userController.create);
+// app.post("/join", userController.create);
+
 app.get("/login", (req, res) => {
   res.render('login-user', { errors: {} })
 });
