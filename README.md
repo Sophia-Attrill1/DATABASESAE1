@@ -1,9 +1,8 @@
-# Database Starter Project 
 
-## Getting Started
+
+## To run this project
 
 - Clone this repo 
-- Install the dependencies -  `npm install`
-- Rename .env.example to .env. You won't normally need to change the values in this file.
-- If this is your first time getting started then run the seeder - `node seeder`
-- Run the project in development mode - `npm run dev`
+- Install all the needed dependencies by typing `npm install` into the console then pressing enter
+- Rename .env.example file to .env
+- To run the project in development mode, type `npm run dev` into the console then click the link to the website
